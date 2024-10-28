@@ -4,14 +4,14 @@
     {
         public static void Main(string[] args)
         {
-            Display(ReadAlbumsFromFile());
+            Display(ReadAlbumsFromFile("Data.txt"));
         }
 
-        public static List<Music> ReadAlbumsFromFile()
+        public static List<Music> ReadAlbumsFromFile(string path)
         {
             List<Music> list = new List<Music>();
-            StreamReader streamReader = new StreamReader("Data.txt");
-            while(!streamReader.EndOfStream)
+            StreamReader streamReader = new StreamReader(path);
+            while (!streamReader.EndOfStream)
             {
                 Music music = new Music()
                 {
