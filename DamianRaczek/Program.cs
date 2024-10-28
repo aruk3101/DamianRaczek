@@ -1,10 +1,8 @@
-﻿using System.Data;
-
-namespace DamianRaczek
+﻿namespace DamianRaczek
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Display(ReadAlbumsFromFile());
         }
@@ -28,6 +26,14 @@ namespace DamianRaczek
             }
             return list;
         }
+
+        /**********************************************
+        nazwa funkcji:          Display
+        opis funkcji:           funkcja wyświetla przekazaną jako parametr listę albumów
+        parametry:              list - lista albumów typu Music
+        zwracany typ i opis:    brak
+        autor:                  PESEL DAMIAN RACZEK
+        **********************************************/
 
         public static void Display(List<Music> list)
         {
