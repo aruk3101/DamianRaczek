@@ -6,7 +6,7 @@ namespace DamianRaczek
     {
         static void Main(string[] args)
         {
-            var x = ReadAlbumsFromFile();
+            Display(ReadAlbumsFromFile());
         }
 
         public static List<Music> ReadAlbumsFromFile()
@@ -26,10 +26,15 @@ namespace DamianRaczek
                 streamReader.ReadLine();
                 list.Add(music);
             }
-
             return list;
         }
 
-
+        public static void Display(List<Music> list)
+        {
+            foreach (Music music in list)
+            {
+                Console.WriteLine($"{music.Artist}\n{music.Album}\n{music.SongsNumber}\n{music.Year}\n{music.DownloadNumber}\n");
+            }
+        }
     }
 }
